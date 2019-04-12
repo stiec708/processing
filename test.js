@@ -111,8 +111,6 @@ function draw() {
   y = y - 1;
 
   if (y < 0) {
-    k = width / 100;
-    z = width / 100;
 
   }
   
