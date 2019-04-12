@@ -1,5 +1,5 @@
 // Where is the circle
-let x, y,z,kk;
+let x, y,z,k, a, b;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
@@ -8,6 +8,8 @@ function setup() {
   z = width / 100;
   x = width / 3;
   y = height;
+  a=  150;
+  b= 170;
 }
 
 
@@ -86,13 +88,21 @@ function draw() {
   ellipse(k+560,500, 100, 60)
   ellipse(k+580,530, 160, 50)
 
-  stroke(50);
+  if (mouseIsPressed) {
+    stroke(50);
+  line(mouseX, mouseY+100, mouseX, mouseY+400);
+  noStroke();
+  fill('red');
+  ellipse(mouseX, mouseY, a, b);
+  triangle(mouseX, mouseY+50, mouseX + 25, mouseY + 100, mouseX - 25, mouseY + 100);
+  } else {
+    stroke(50);
   line(x, y+100, x, y+400);
   noStroke();
   fill('red');
-  ellipse(x, y, 150, 170);
-  triangle(x, y+50, x + 25, y + 100, x - 25, y + 100);
-  
+  ellipse(x, y, a, b);
+  triangle(x, y+50, x + 25, y + 100, x - 25, y + 100);}
+
   x = x + 1;
   z = z + 0.2;
   k = k + 0.35;
