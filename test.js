@@ -92,7 +92,7 @@ function draw() {
     stroke(50);
   line(mouseX, mouseY+100, mouseX, mouseY+400);
   noStroke();
-  fill('F95087');
+  fill('#F95087');
   ellipse(mouseX, mouseY, a, b);
   triangle(mouseX, mouseY+50, mouseX + 25, mouseY + 100, mouseX - 25, mouseY + 100);
   } else {
