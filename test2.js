@@ -14,7 +14,7 @@ function draw() {
     if (mousePressed) {
         fill('red');
         noStroke();
-        ellipse(x, y, d, d);
+        ellipse(mo, y, d, d);
         } else {
             fill('red');
             noStroke();

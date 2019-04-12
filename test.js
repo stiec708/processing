@@ -92,22 +92,28 @@ function draw() {
     stroke(50);
   line(mouseX, mouseY+100, mouseX, mouseY+400);
   noStroke();
-  fill('red');
+  fill('F95087');
   ellipse(mouseX, mouseY, a, b);
   triangle(mouseX, mouseY+50, mouseX + 25, mouseY + 100, mouseX - 25, mouseY + 100);
   } else {
     stroke(50);
   line(x, y+100, x, y+400);
   noStroke();
-  fill('red');
+  fill('#F95087');
   ellipse(x, y, a, b);
   triangle(x, y+50, x + 25, y + 100, x - 25, y + 100);}
 
-  x = x + 1;
+  x = x + 0.75;
   z = z + 0.2;
   k = k + 0.35;
   
   // Moving up at a constant speed
   y = y - 1;
+
+  if (y < 0) {
+    k = width / 100;
+    z = width / 100;
+
+  }
   
 }
